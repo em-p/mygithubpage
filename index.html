@@ -65,7 +65,8 @@ var quotes =[
    "You a genius.",
    "You smart.",
    "I appreciate you",
-   "U loyal."]
+   "U loyal.",
+   "My sound is accurate."]
 
 
 
@@ -109,11 +110,21 @@ function anotherOne(){
   
   
 }
+function write(){
+  var quoteSubmits = new File(document.getElementById("kuote").value.textContent);
+  quoteSubmits.open("w"); // open file with write acces
+  quoteSubmits.write(str);
+  file.close();.close();
+  document.getElementById("kuote").value.textContent = '';
+}
 </script>
 
 
 <button id="another1" name="generate" type="button" value="another one" onclick='anotherOne();'>Another One </button>
+<form id="kuote">Submit Khaled Kuotes</form>
+<button id="kuotebutton" name="generate" type="button" onclick='write();'>Submit Kuote </button>
 <div id="container"></div>
-<p id="quote"><strong></strong></p>
+<p id="quote"><strong>CLICK FOR A Khaled Kuote</strong></p>
 <a href="https://www.youtube.com/watch?v=I0dBVsCe2fM" style="width:100%;text-align:center">CLICK HERE</a>
+
 </html>
