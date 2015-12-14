@@ -66,7 +66,9 @@ var quotes =[
    "You smart.",
    "I appreciate you",
    "U loyal.",
-   "My sound is accurate."]
+   "My sound is accurate.",
+   "I got so much jerlwy... It's not even about the jerlwy.",
+   ["Shout out to all the Bahameans"]]
 
 
 
@@ -89,7 +91,8 @@ function playAnotherOne(count){
    
   
 }
-
+var backgrounds = ["url('http://ak-hdl.buzzfed.com/static/2015-06/26/7/enhanced/webdr15/anigif_enhanced-5028-1435318353-3.gif')","url('http://cdn.makeagif.com/media/10-01-2015/0hURsw.gif')"];
+var i = 0;
 function anotherOne(){
   
  
@@ -97,7 +100,11 @@ function anotherOne(){
   document.getElementById("quote").textContent = "Khaled Kuote: "+ quotes[Math.floor((Math.random() * quotes.length))] + "-DJ KHALED";
     playAnotherOne(counter);
   
-
+  document.getElementById("id").style.backgorund = backgrounds[0];
+  i+=1;
+  if (i>1){
+    i=0;
+  }
   if (sizeX > 5){
     sizeX /= 1.5;
     sizeY /= 1.5;
