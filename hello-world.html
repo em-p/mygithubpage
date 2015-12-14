@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<title>Another One</title>
+<html id ="id" style="height:500px">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<style type="text/css">
+body{
+  background-color:transparent;
+}
+  #id {
+    background: url(http://cdn.makeagif.com/media/10-01-2015/0hURsw.gif);
+    background-size: 100% 40;
+    background-color:transparent;
+    background-repeat: repeat;
+  
+}
+  #another1{
+    width   : 100%;
+    
+    text-align: center;
+    background  : none;
+    cursor  : pointer;
+    font-family : 'voltaeftu-regular',Times New Roman;
+    font-size   : 40px;
+    color   : #fff;
+    border  : none;
+    margin-top      : 50px;
+    padding     : 0px;
+    border-width:10px ;
+    border-color:black;
+    background-color:transparent;
+    
+  }
+  #another1:hover{
+    color:teal;
+    color:black;
+    background-color:transparent;
+  }
+  #quote{
+    font-family : 'voltaeftu-regular',Times New Roman;
+    font-size   : 40px;
+    color:white;
+    margin-left:30%;
+    margin-right:30%;
+    background-color:gray;
+    padding:5px;
+  }
+</style>
+<!-- Start of SimpleHitCounter Code -->
+<div align="left"><img src="http://simplehitcounter.com/hit.php?uid=1989578&f=65535&b=0" border="0" height="18" width="83" alt="web counter"><br></div>
+<!-- End of SimpleHitCounter Code -->
+
+<script>
+var quotes =[
+  "Go buy yo momma a house. Go buy yo whole family houses. Put this money in yo savings account. Go spend this money for no reason. Come back and ask for more.",
+   " Never give up, never surrender.",
+   "Say my name.",
+   "Another One.",
+   "Its all about vibes... ya know.",
+   "So important to keep the path way to success clean.",
+   "They will try close the door on u jus open it.",
+   "I name my plants",
+   "Ride wit me.",
+   "Good Morning... Bless Up.",
+   "Follow code...Feed ur family and keep ur face clean.",
+   "You a genius.",
+   "You smart.",
+   "I appreciate you",
+   "U loyal."]
+
+
+
+var sizeX = 40; 
+var sizeY = 100; 
+var delay = 100;
+var counter = 1;
+var win = new Audio('win.mp3');
+//win.play();
+function playAnotherOne(count){
+  var anothaOne = [new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav'),new Audio('anotherOne.wav')];
+  for (var i = 0;i<count*2; i++)
+  anothaOne[0].play();
+  anothaOne[1].play();
+  anothaOne[2].play();anothaOne[3].play();
+  
+  
+
+   
+   
+  
+}
+
+function anotherOne(){
+  
+ 
+  document.getElementById("id").style.backgroundSize = sizeX+"% "+sizeY+"%";
+  document.getElementById("quote").textContent = "Khaled Kuote: "+ quotes[Math.floor((Math.random() * quotes.length))] + "-DJ KHALED";
+    playAnotherOne(counter);
+  
+
+  if (sizeX > 5){
+    sizeX /= 1.5;
+    sizeY /= 1.5;
+    counter+=1;
+  }else{
+     sizeX = 40;
+    sizeY = 100;
+    counter = 1;
+  }
+  
+  
+}
+</script>
+
+
+<button id="another1" name="generate" type="button" value="another one" onclick='anotherOne();'>Another One </button>
+<div id="container"></div>
+<p id="quote"><strong></strong></p>
+</html>
